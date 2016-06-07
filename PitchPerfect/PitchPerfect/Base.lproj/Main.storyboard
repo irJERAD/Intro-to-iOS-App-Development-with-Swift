@@ -21,17 +21,41 @@
                                 <rect key="frame" x="276" y="285" width="49" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vJf-Py-mkS"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAw-eq-3Ly">
+                                <rect key="frame" x="247" y="393" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5tF-Je-iKE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap To Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fli-CH-TJp">
+                                <rect key="frame" x="245" y="342" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fHS-wN-x0i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bUI-cx-hfs"/>
-                            <constraint firstItem="fHS-wN-x0i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rKf-EO-7dQ"/>
+                            <constraint firstItem="YAw-eq-3Ly" firstAttribute="top" secondItem="fli-CH-TJp" secondAttribute="bottom" constant="30" id="EqZ-Cv-ez4"/>
+                            <constraint firstItem="YAw-eq-3Ly" firstAttribute="centerX" secondItem="fli-CH-TJp" secondAttribute="centerX" id="Hkj-Cd-yYD"/>
+                            <constraint firstItem="fHS-wN-x0i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I4w-dZ-ROU"/>
+                            <constraint firstItem="fli-CH-TJp" firstAttribute="top" secondItem="fHS-wN-x0i" secondAttribute="bottom" constant="27" id="JgW-CU-okn"/>
+                            <constraint firstItem="fHS-wN-x0i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lnl-Ay-Zpp"/>
+                            <constraint firstItem="fli-CH-TJp" firstAttribute="centerX" secondItem="fHS-wN-x0i" secondAttribute="centerX" id="imZ-rE-aHB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="fli-CH-TJp" id="ooy-ey-hbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="219" y="426"/>
         </scene>
     </scenes>
 </document>
